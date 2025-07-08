@@ -22,4 +22,4 @@ class Code(BaseHTTPRequestHandler):
         self.wfile.write(responce)
 
 with HTTPServer(('localhost', 80), Code) as server:
-    server.serve_forever
+    server.serve_forever()
