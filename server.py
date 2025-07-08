@@ -5,7 +5,7 @@ class Code(BaseHTTPRequestHandler):
     def do_GET(self):
         rawparams = self.path.split('?')
 
-        if rawparams > 1:
+        if len(rawparams) > 1:
             params = dict(item.split('=') for item in rawparams[1].split('&'))
 
             arg = params.get('arg')
